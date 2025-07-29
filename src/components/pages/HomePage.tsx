@@ -1,14 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const HomePage: React.FC = () => {
+  const navigate = useNavigate()
+
   const handlePortfolioClick = () => {
-    window.location.href = '/portfolio'
+    navigate('/portfolio')
   }
 
   const handleConsultationClick = () => {
-    window.location.href = '/contact'
+    navigate('/contact')
   }
 
   return (
